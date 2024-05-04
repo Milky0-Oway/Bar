@@ -1,0 +1,45 @@
+.productdisplay{
+    display: flex;
+    margin: 40px 30%;
+}
+
+.productdisplay-left{
+    display: flex;
+    gap: 17px;
+}
+
+.productdisplay-main-img{
+    width: 100%;
+}
+
+.productdisplay-right{
+    margin: 0 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productdisplay-right h1{
+    color: honeydew;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.productdisplay-right-price{
+    margin: 40px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: red;
+}
+
+.productdisplay-right button{
+    padding: 20px 40px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: honeydew;
+    background: #282c34;
+    margin-bottom: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

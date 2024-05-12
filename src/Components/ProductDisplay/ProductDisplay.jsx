@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import './ProductDisplay.css';
+import {ShopContext} from "../../Context/BarContext";
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
 
     const displayIngredients = (text) => {
         const ingredients = text.split(',');
@@ -31,7 +33,7 @@ const ProductDisplay = (props) => {
                     <h2>Ингридиенты:</h2>
                     {displayIngredients(product.ingredients)}
                 </div>
-                <button>Добавить в корзину</button>
+                <button onClick={()=>{addToCart(product.id)}}>Добавить в корзину</button>
             </div>
         </div>
     );

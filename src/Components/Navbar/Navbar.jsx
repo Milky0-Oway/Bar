@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import './Navbar.css';
 import logo from '../Assets/logo.png';
 import {Link} from "react-router-dom";
-import LoginSignup from "../../Pages/LoginSingup";
+import {ShopContext} from "../../Context/BarContext";
+
 const Navbar = () => {
+    const {getTotalItems} = useContext(ShopContext);
     return(
         <nav>
             <div className='nav-logo'>
@@ -20,7 +22,7 @@ const Navbar = () => {
             <div className='nav-login-cart'>
                 <Link style={{background: 'none'}} to='/login'><ion-icon name="person-outline" style={{height: '27px', width: '27px', background: 'none'}}></ion-icon></Link>
                 <Link style={{background: 'none'}} to='/cart'><ion-icon name="cart-outline" style={{height: '30px', width: '30px', background: 'none'}}></ion-icon></Link>
-                <div className='nav-cart-count'>0</div>
+                <div className='nav-cart-count'>{getTotalItems()}</div>
             </div>
             </nav>
     );

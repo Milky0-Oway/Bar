@@ -1,0 +1,41 @@
+.foodcategory-header{
+    margin: 30px 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.foodcategory-header h1 {
+    font-size: 35px;
+}
+
+.foodcategory-sort {
+    display: flex;
+    gap: 10px;
+}
+
+.foodcategory-sort select, option {
+    color: #181817;
+}
+
+.foodcategory-products{
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .foodcategory-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+}
